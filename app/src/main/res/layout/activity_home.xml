@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeActivity">
+
+    <ImageView
+        android:id="@+id/hm_img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="258dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/news_crop"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/background_news" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="258dp"
+        android:alpha="0.5"
+        android:background="@color/grey_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@+id/hm_line1"
+        android:layout_width="60dp"
+        android:layout_height="2dp"
+        android:background="@color/white"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintStart_toStartOf="@id/hm_img_news"
+        app:layout_constraintBottom_toTopOf="@id/hm_img_news"/>
+    <View
+        android:id="@+id/hm_line2"
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:background="@color/white"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintStart_toStartOf="@id/hm_line1"
+        app:layout_constraintBottom_toTopOf="@id/hm_line1"/>
+
+    <ImageView
+        android:id="@+id/hm_img_circle"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="24dp"
+        android:contentDescription="@string/circle_yellow"
+        android:src="@drawable/ic_circle_yellow"
+        app:layout_constraintBottom_toTopOf="@id/hm_input_news"
+        app:layout_constraintStart_toEndOf="@id/hm_title"
+         />
+
+    <ImageView
+        android:id="@+id/hm_img_news"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_news_white"
+        app:layout_constraintBottom_toTopOf="@id/hm_input_news"
+        app:layout_constraintStart_toStartOf="@id/hm_input_news"
+        android:contentDescription="@string/icon_news" />
+
+    <TextView
+        android:id="@+id/hm_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/racing_sans_one"
+        android:text="@string/app_name"
+        android:textSize="38sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/hm_img_news"
+        app:layout_constraintStart_toEndOf="@id/hm_img_news"
+        app:layout_constraintTop_toTopOf="@id/hm_img_news" />
+
+    <EditText
+        android:id="@+id/hm_input_news"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:textSize="12sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="48dp"
+        android:hint="@string/hint_input_news"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/shape_input_news"
+        android:inputType="text"
+        android:autofillHints="@string/app_name" />
+
+    <Button
+        android:id="@+id/hm_btn_news"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/ic_search_grey"
+        app:layout_constraintEnd_toEndOf="@id/hm_input_news"
+        app:layout_constraintTop_toTopOf="@id/hm_input_news"
+        app:layout_constraintBottom_toBottomOf="@id/hm_input_news" />
+
+    <TextView
+        android:id="@+id/hm_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/result"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hm_input_news" />
+
+    <View
+        android:id="@+id/hm_bg1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_background_home1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hm_result" />
+    <View
+        android:id="@+id/hm_bg2"
+        android:layout_width="360dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/shape_background_home2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hm_bg1"/>
+
+    <ImageView
+        android:id="@+id/hm_img_verified"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/verified"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/hm_bg2"
+        android:contentDescription="@string/icon_verified" />
+
+    <TextView
+        android:id="@+id/hm_result_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="@string/result_news"
+        android:textColor="@color/grey_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hm_img_verified" />
+
+    <View
+        android:id="@+id/hm_line3"
+        android:layout_width="320dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/grey_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hm_result_news"  />
+    <TextView
+        android:id="@+id/hm_fac1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faktor_1"
+        android:textSize="12sp"
+        android:textColor="@color/grey_app"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="@id/hm_bg2"
+        app:layout_constraintTop_toBottomOf="@id/hm_line3"
+        />
+    <TextView
+        android:id="@+id/hm_des1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deskripsi_1"
+        android:textSize="12sp"
+        android:textColor="@color/grey_app"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/hm_fac1"
+        app:layout_constraintTop_toBottomOf="@id/hm_line3"
+        />
+    <TextView
+        android:id="@+id/hm_fac2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faktor_2"
+        android:textSize="12sp"
+        android:textColor="@color/grey_app"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="@id/hm_bg2"
+        app:layout_constraintTop_toBottomOf="@id/hm_fac1"
+        />
+    <TextView
+        android:id="@+id/hm_des2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deskripsi_2"
+        android:textSize="12sp"
+        android:textColor="@color/grey_app"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/hm_fac1"
+        app:layout_constraintTop_toBottomOf="@id/hm_des1"
+        />
+    <TextView
+        android:id="@+id/hm_fac3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faktor_3"
+        android:textSize="12sp"
+        android:textColor="@color/grey_app"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="@id/hm_bg2"
+        app:layout_constraintTop_toBottomOf="@id/hm_fac2"
+        />
+    <TextView
+        android:id="@+id/hm_des3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deskripsi_3"
+        android:textSize="12sp"
+        android:textColor="@color/grey_app"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/hm_fac1"
+        app:layout_constraintTop_toBottomOf="@id/hm_des2"
+        />
+    <TextView
+        android:id="@+id/hm_fac4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faktor_4"
+        android:textSize="12sp"
+        android:textColor="@color/grey_app"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="@id/hm_bg2"
+        app:layout_constraintTop_toBottomOf="@id/hm_fac3"
+        />
+    <TextView
+        android:id="@+id/hm_des4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deskripsi_4"
+        android:textSize="12sp"
+        android:textColor="@color/grey_app"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/hm_fac1"
+        app:layout_constraintTop_toBottomOf="@id/hm_des3"  />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/hm_bg2"
+        app:layout_constraintStart_toStartOf="@+id/hm_bg2"
+        app:layout_constraintTop_toTopOf="@+id/hm_bg2"
+        app:layout_constraintBottom_toBottomOf="@+id/hm_bg2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

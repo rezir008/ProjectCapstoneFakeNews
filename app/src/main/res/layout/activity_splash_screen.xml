@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.splashscreen.SplashScreenActivity">
+
+    <View
+        android:id="@+id/sc_bg"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/shape_splashscreen" />
+
+    <ImageView
+        android:id="@+id/sc_circe1"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_marginEnd="50dp"
+        android:contentDescription="@string/circle_yellow"
+        android:src="@drawable/ic_circle_yellow"
+        app:layout_constraintEnd_toEndOf="@id/sc_bg"
+        app:layout_constraintTop_toBottomOf="@id/sc_bg"/>
+
+    <ImageView
+        android:id="@+id/sc_circe2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="200dp"
+        android:contentDescription="@string/circle_yellow"
+        android:src="@drawable/ic_circle_yellow"
+        app:layout_constraintStart_toStartOf="@id/sc_bg"
+        app:layout_constraintTop_toBottomOf="@id/sc_bg" />
+
+    <ImageView
+        android:id="@+id/sc_circe3"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="180dp"
+        android:contentDescription="@string/circle_yellow"
+        android:src="@drawable/ic_circle_yellow"
+        app:layout_constraintStart_toStartOf="@id/sc_bg"
+        app:layout_constraintBottom_toTopOf="@id/sc_bg" />
+
+    <ImageView
+        android:id="@+id/sc_img_news"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/news_yellow"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_news_yellow"
+        app:layout_constraintBottom_toTopOf="@+id/sc_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/sc_search"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="32dp"
+        android:contentDescription="@string/circle_yellow"
+        android:src="@drawable/ic_search_grey"
+        app:layout_constraintBottom_toBottomOf="@+id/sc_bg"
+        app:layout_constraintTop_toTopOf="@id/sc_bg"
+        app:layout_constraintStart_toStartOf="@+id/sc_bg" />
+
+    <TextView
+        android:id="@+id/sc_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/racing_sans_one"
+        android:textColor="@color/grey_app"
+        android:text="@string/app_name"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sc_bg"
+        app:layout_constraintStart_toEndOf="@+id/sc_search"
+        app:layout_constraintTop_toTopOf="@id/sc_bg" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
