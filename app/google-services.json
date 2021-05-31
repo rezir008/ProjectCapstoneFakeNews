@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "583099108578",
+    "project_id": "promising-booth-312914",
+    "storage_bucket": "promising-booth-312914.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583099108578:android:f7244cd3f44b7b3138e2bb",
+        "android_client_info": {
+          "package_name": "com.pasrahsaja.projectcapstonefakenews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583099108578-eef0q7km50hc786d3j1gd7hjicu6hh0o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pasrahsaja.projectcapstonefakenews",
+            "certificate_hash": "e22075e5aa05efef3d90ea5d61135c957f88d322"
+          }
+        },
+        {
+          "client_id": "583099108578-gi6ifot7pglliqc3po5ac9rdrmn2q2vb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfpUaJdG-d2o9yakW6fu9P5fwZHY5lWho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583099108578-gi6ifot7pglliqc3po5ac9rdrmn2q2vb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
