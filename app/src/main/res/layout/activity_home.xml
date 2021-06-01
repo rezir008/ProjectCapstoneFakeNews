@@ -92,13 +92,13 @@
         android:inputType="text"
         android:autofillHints="@string/app_name" />
 
-    <Button
+    <ImageButton
         android:id="@+id/hm_btn_news"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginEnd="12dp"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:background="@drawable/ic_search_grey"
+        android:background="@drawable/button_search"
+        android:contentDescription="@string/btn_news"
         app:layout_constraintEnd_toEndOf="@id/hm_input_news"
         app:layout_constraintTop_toTopOf="@id/hm_input_news"
         app:layout_constraintBottom_toBottomOf="@id/hm_input_news" />
