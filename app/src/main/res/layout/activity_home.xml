@@ -53,10 +53,9 @@
 
     <ImageView
         android:id="@+id/hm_img_news"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/ic_news_white"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logo_capstone"
         app:layout_constraintBottom_toTopOf="@id/hm_input_news"
         app:layout_constraintStart_toStartOf="@id/hm_input_news"
         android:contentDescription="@string/icon_news" />

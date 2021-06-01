@@ -51,11 +51,10 @@
 
     <ImageView
         android:id="@+id/sc_img_news"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/news_yellow"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/ic_news_yellow"
+        android:src="@drawable/logo_capstone"
         app:layout_constraintBottom_toTopOf="@+id/sc_bg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
