@@ -18,6 +18,5 @@ class HomeActivity : AppCompatActivity() {
             Toast.makeText(this@HomeActivity, binding.hmInputNews.text, Toast.LENGTH_SHORT).show()
         }
 
-
     }
 }

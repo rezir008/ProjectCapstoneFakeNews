@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_news_white"
+        android:icon="@drawable/logo_capstone"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_news_white"
+        android:roundIcon="@drawable/logo_capstone"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectCapstoneFakeNews">
         <activity android:name=".ui.home.HomeActivity" />

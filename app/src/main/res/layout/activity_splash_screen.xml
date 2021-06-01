@@ -51,11 +51,10 @@
 
     <ImageView
         android:id="@+id/sc_img_news"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/news_yellow"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/ic_news_yellow"
+        android:src="@drawable/logo_capstone"
         app:layout_constraintBottom_toTopOf="@+id/sc_bg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -83,6 +82,31 @@
         app:layout_constraintBottom_toBottomOf="@+id/sc_bg"
         app:layout_constraintStart_toEndOf="@+id/sc_search"
         app:layout_constraintTop_toTopOf="@id/sc_bg" />
+
+    <TextView
+        android:id="@+id/sc_cp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/copyright"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressbar_sc"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:progressBackgroundTint="@color/black"
+        android:progress="2"
+        app:layout_constraintBottom_toTopOf="@+id/sc_cp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
