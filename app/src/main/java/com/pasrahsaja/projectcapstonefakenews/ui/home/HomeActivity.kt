@@ -33,6 +33,7 @@ class HomeActivity : AppCompatActivity() {
 
         binding.hmBtnNews.setOnClickListener {
             val inputEditText = binding.hmInputNews.text.toString()
+            binding.hmResult.text = inputEditText
             binding.hmBg2.visibility = VISIBLE
             binding.progressbar.visibility = VISIBLE
             result(classify(inputEditText))
