@@ -41,10 +41,10 @@ class HomeActivity : AppCompatActivity() {
             binding.hmBg2.visibility = VISIBLE
             binding.hmResultNews.visibility = VISIBLE
             if(b!! > a!!){
-                result(0)
+                result(1)
             }
             else{
-                result(1)
+                result(0)
             }
             binding.progressbar.visibility = GONE
             Toast.makeText(this@HomeActivity, inputEditText, Toast.LENGTH_SHORT).show()
