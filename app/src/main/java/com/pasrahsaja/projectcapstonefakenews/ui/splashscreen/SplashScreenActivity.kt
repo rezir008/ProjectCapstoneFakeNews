@@ -16,10 +16,10 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
         val test: ProgressBar = findViewById(R.id.progressbar_sc)
-        test.max = 100
-        val currentProgress = 100
+        test.max = TIME.toInt()
+        val currentProgress = TIME.toInt()
         ObjectAnimator.ofInt(test, "progress", currentProgress)
-            .setDuration(3000)
+            .setDuration(TIME)
             .start()
 
         Handler().postDelayed({

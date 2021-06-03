@@ -67,7 +67,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-ml-modeldownloader-ktx'
 
     // Also declare the dependency for the TensorFlow Lite library and specify its version
-    implementation 'org.tensorflow:tensorflow-lite:2.3.0'
+    implementation 'org.tensorflow:tensorflow-lite:2.4.0'
 
     implementation 'com.google.firebase:firebase-ml-model-interpreter:22.0.4'
     implementation 'org.tensorflow:tensorflow-lite-task-text:0.1.0'
