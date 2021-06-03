@@ -139,7 +139,7 @@
         android:layout_height="150dp"
         android:layout_marginBottom="80dp"
         android:contentDescription="@string/icon_verified"
-        android:src="@drawable/success"
+        android:src="@drawable/verified"
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="@id/hm_bg2"
         app:layout_constraintBottom_toBottomOf="@+id/hm_bg2"

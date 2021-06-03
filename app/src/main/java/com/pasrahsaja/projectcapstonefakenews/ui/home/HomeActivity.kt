@@ -1,6 +1,5 @@
 package com.pasrahsaja.projectcapstonefakenews.ui.home
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.View.*
@@ -31,7 +30,6 @@ class HomeActivity : AppCompatActivity() {
         executorService = Executors.newSingleThreadExecutor()
         downloadModel("fakenews")
 
-
         binding.hmBtnNews.setOnClickListener {
             val inputEditText = binding.hmInputNews.text.toString()
             binding.progressbar.visibility = VISIBLE
@@ -39,21 +37,23 @@ class HomeActivity : AppCompatActivity() {
             binding.hmResult.text = inputEditText
             binding.hmBg2.visibility = VISIBLE
             binding.hmResultNews.visibility = VISIBLE
-            binding.hmImgVerified.visibility = VISIBLE
             binding.progressbar.visibility = GONE
+            binding.hmImgVerified.visibility = VISIBLE
             Toast.makeText(this@HomeActivity, inputEditText, Toast.LENGTH_SHORT).show()
         }
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables")
     private fun result(classify: Int) {
+
         if(classify == 1){
             binding.hmResultNews.text ="Valid"
-            binding.hmImgVerified.setImageDrawable(getDrawable(R.drawable.success))
+            binding.hmImgVerified.setImageResource(R.drawable.success)
+
         }
         else{
             binding.hmResultNews.text ="Invalid"
-            binding.hmImgVerified.setImageDrawable(getDrawable(R.drawable.unsuccess))
+            binding.hmImgVerified.setImageResource(R.drawable.unsuccess)
+
         }
     }
 
