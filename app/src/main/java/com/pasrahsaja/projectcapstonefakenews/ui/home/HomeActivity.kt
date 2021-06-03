@@ -38,12 +38,6 @@ class HomeActivity : AppCompatActivity() {
             binding.hmResult.text = inputEditText
             binding.hmBg2.visibility = VISIBLE
             binding.hmResultNews.visibility = VISIBLE
-            if(binding.hmResult.text.toString().toDouble()  < binding.hmResultNews.text.toString().toDouble() ){
-                result(1)
-            }
-            else{
-                result(0)
-            }
             binding.progressbar.visibility = GONE
             Toast.makeText(this@HomeActivity, inputEditText, Toast.LENGTH_SHORT).show()
         }
@@ -66,8 +60,13 @@ class HomeActivity : AppCompatActivity() {
     private fun classify(text: String){
         executorService?.execute {
             val results = textClassifier!!.classify(text)
-            binding.hmResult.text = results[0].score.toDouble().toString()
-            binding.hmResultNews.text = results[1].score.toDouble().toString()
+            if (results[0].score.toDouble().toString() < results[1].score.toDouble().toString()){
+                result(1)
+            }
+            else{
+                result(0)
+            }
+
         }
     }
 
