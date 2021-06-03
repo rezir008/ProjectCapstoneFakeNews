@@ -22,6 +22,8 @@ class HomeActivity : AppCompatActivity() {
     private val TAG = "TextClassificationDemo"
     private var executorService: ExecutorService? = null
     private var textClassifier: NLClassifier? = null
+    private var a: Double? = null
+    private var b: Double? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,12 +35,17 @@ class HomeActivity : AppCompatActivity() {
 
         binding.hmBtnNews.setOnClickListener {
             val inputEditText = binding.hmInputNews.text.toString()
-            val a = classify(inputEditText)
             binding.progressbar.visibility = VISIBLE
+            classify(inputEditText)
             binding.hmResult.text = inputEditText
             binding.hmBg2.visibility = VISIBLE
             binding.hmResultNews.visibility = VISIBLE
-            result(a)
+            if(b!! > a!!){
+                result(0)
+            }
+            else{
+                result(1)
+            }
             binding.progressbar.visibility = GONE
             Toast.makeText(this@HomeActivity, inputEditText, Toast.LENGTH_SHORT).show()
         }
@@ -58,19 +65,12 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    private fun classify(text: String): Int {
-        var result = 0
+    private fun classify(text: String){
         executorService?.execute {
             val results = textClassifier!!.classify(text)
-            if(results[0].score.toDouble() <= results[1].score.toDouble()){
-                result = 1
-            }
-            else{
-                result = 0
-            }
+            a = results[0].score.toDouble()
+            b = results[1].score.toDouble()
         }
-        return result
-
     }
 
     @Synchronized
