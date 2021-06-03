@@ -2,8 +2,7 @@ package com.pasrahsaja.projectcapstonefakenews.ui.home
 
 import android.os.Bundle
 import android.util.Log
-import android.view.View.GONE
-import android.view.View.VISIBLE
+import android.view.View.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.Task
@@ -44,16 +43,15 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun result(classify: Int) {
-
         if(classify == 1){
             binding.hmResultNews.text ="Valid"
             binding.hmImgVerified.visibility = VISIBLE
-            binding.hmImgUnverified.visibility = GONE
+            binding.hmImgUnverified.visibility = INVISIBLE
         }
         else{
             binding.hmResultNews.text ="Invalid"
-            binding.hmImgVerified.visibility = GONE
             binding.hmImgUnverified.visibility = VISIBLE
+            binding.hmImgVerified.visibility = INVISIBLE
         }
     }
 
