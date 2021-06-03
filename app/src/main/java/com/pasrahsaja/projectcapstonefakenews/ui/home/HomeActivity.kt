@@ -46,12 +46,12 @@ class HomeActivity : AppCompatActivity() {
         if(classify == 1){
             binding.hmResultNews.text ="Valid"
             binding.hmImgVerified.visibility = VISIBLE
-            binding.hmImgUnverified.visibility = INVISIBLE
+            binding.hmImgUnverified.visibility = GONE
         }
         else{
             binding.hmResultNews.text ="Invalid"
             binding.hmImgUnverified.visibility = VISIBLE
-            binding.hmImgVerified.visibility = INVISIBLE
+            binding.hmImgVerified.visibility = GONE
         }
     }
 
