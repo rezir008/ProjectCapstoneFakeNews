@@ -20,7 +20,6 @@ import java.util.concurrent.Executors
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
     private val TAG = "TextClassificationDemo"
-    private var returnText = ""
     private var executorService: ExecutorService? = null
     private var textClassifier: NLClassifier? = null
 
