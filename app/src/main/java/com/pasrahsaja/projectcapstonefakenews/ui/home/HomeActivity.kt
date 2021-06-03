@@ -38,7 +38,7 @@ class HomeActivity : AppCompatActivity() {
             binding.hmResult.text = inputEditText
             binding.hmBg2.visibility = VISIBLE
             binding.hmResultNews.visibility = VISIBLE
-            if(binding.hmResult.text.toString().toDouble()  > binding.hmResultNews.text.toString().toDouble() ){
+            if(binding.hmResult.text.toString().toDouble()  < binding.hmResultNews.text.toString().toDouble() ){
                 result(1)
             }
             else{
