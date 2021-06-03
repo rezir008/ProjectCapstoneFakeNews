@@ -3,16 +3,8 @@
     <string name="circle_yellow">Circle Yellow</string>
     <string name="news_yellow">News Yellow</string>
     <string name="hint_input_news">Input Berita..</string>
-    <string name="result">Hasil Verifikasi Berita</string>
+    <string name="result">Harap Menggunakan Wifi untuk Proses Download Model</string>
     <string name="result_news">Berita Valid</string>
-    <string name="deskripsi_4">Deskripsi 4</string>
-    <string name="faktor_4">Faktor 4</string>
-    <string name="deskripsi_3">Deskripsi 3</string>
-    <string name="faktor_3">Faktor 3</string>
-    <string name="deskripsi_2">Deskripsi 2</string>
-    <string name="faktor_2">Faktor 2</string>
-    <string name="deskripsi_1">Deskripsi 1</string>
-    <string name="faktor_1">Faktor 1</string>
     <string name="background_news">Background Koran</string>
     <string name="icon_news">Ikon Koran</string>
     <string name="icon_verified">Icon Verified</string>

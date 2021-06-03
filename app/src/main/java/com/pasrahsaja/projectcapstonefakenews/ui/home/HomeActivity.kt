@@ -89,6 +89,7 @@ class HomeActivity : AppCompatActivity() {
                 executorService!!, { task: Task<File> ->
                     val modelFile = task.result
                     textClassifier = NLClassifier.createFromFile(modelFile)
+                    binding.hmBtnNews.setEnabled(true)
                     null
                 })
             .addOnFailureListener { e: Exception? ->
@@ -96,9 +97,9 @@ class HomeActivity : AppCompatActivity() {
                 Toast.makeText(
                     this@HomeActivity,
                     "Model download failed, please check your connection.",
-                    Toast.LENGTH_LONG
-                )
+                    Toast.LENGTH_LONG)
                     .show()
+                binding.hmBtnNews.setEnabled(false)
             }
     }
 }
