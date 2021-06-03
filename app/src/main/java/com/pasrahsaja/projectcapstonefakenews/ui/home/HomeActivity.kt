@@ -61,7 +61,7 @@ class HomeActivity : AppCompatActivity() {
         var result = 0
         executorService?.execute {
             val results = textClassifier!!.classify(text)
-            if(results[0].score.toDouble() <= results[0].score.toDouble()){
+            if(results[0].score.toDouble() <= results[1].score.toDouble()){
                 result = 1
             }
             else{
