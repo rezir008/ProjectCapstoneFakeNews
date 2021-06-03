@@ -1,0 +1,5 @@
+Ini Dokumentasi aja :
+https://www.kaggle.com/c/fake-news/data
+https://firebase.google.com/docs/ml-kit
+https://firebase.google.com/codelabs/textclassification-android
+https://firebase.google.com/docs/ml/android/use-custom-models?hl=id 
