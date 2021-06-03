@@ -33,11 +33,12 @@ class HomeActivity : AppCompatActivity() {
 
         binding.hmBtnNews.setOnClickListener {
             val inputEditText = binding.hmInputNews.text.toString()
+            val a = classify(inputEditText)
             binding.progressbar.visibility = VISIBLE
             binding.hmResult.text = inputEditText
             binding.hmBg2.visibility = VISIBLE
             binding.hmResultNews.visibility = VISIBLE
-            result(classify(inputEditText))
+            result(a)
             binding.progressbar.visibility = GONE
             Toast.makeText(this@HomeActivity, inputEditText, Toast.LENGTH_SHORT).show()
         }
@@ -45,7 +46,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun result(classify: Int) {
 
-        if(classify==1){
+        if(classify == 1){
             binding.hmResultNews.text ="Valid"
             binding.hmImgVerified.visibility = VISIBLE
             binding.hmImgUnverified.visibility = GONE
@@ -69,6 +70,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         return result
+
     }
 
     @Synchronized
