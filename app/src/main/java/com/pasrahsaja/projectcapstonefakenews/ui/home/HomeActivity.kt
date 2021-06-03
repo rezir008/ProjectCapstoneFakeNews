@@ -17,7 +17,6 @@ import java.io.File
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
-@Suppress("DEPRECATION")
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
     private val TAG = "TextClassificationDemo"
@@ -50,11 +49,11 @@ class HomeActivity : AppCompatActivity() {
     private fun result(classify: Int) {
         if(classify == 1){
             binding.hmResultNews.text ="Valid"
-            binding.hmImgVerified.setImageDrawable(getResources().getDrawable(R.drawable.success))
+            binding.hmImgVerified.setImageDrawable(getDrawable(R.drawable.success))
         }
         else{
             binding.hmResultNews.text ="Invalid"
-            binding.hmImgVerified.setImageDrawable(getResources().getDrawable(R.drawable.unsuccess))
+            binding.hmImgVerified.setImageDrawable(getDrawable(R.drawable.unsuccess))
         }
     }
 
