@@ -22,8 +22,6 @@ class HomeActivity : AppCompatActivity() {
     private val TAG = "TextClassificationDemo"
     private var executorService: ExecutorService? = null
     private var textClassifier: NLClassifier? = null
-    private var a: Double? = null
-    private var b: Double? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +38,7 @@ class HomeActivity : AppCompatActivity() {
             binding.hmResult.text = inputEditText
             binding.hmBg2.visibility = VISIBLE
             binding.hmResultNews.visibility = VISIBLE
-            if(b!! > a!!){
+            if(binding.hmResult.text.toString().toDouble()  > binding.hmResultNews.text.toString().toDouble() ){
                 result(1)
             }
             else{
@@ -68,8 +66,8 @@ class HomeActivity : AppCompatActivity() {
     private fun classify(text: String){
         executorService?.execute {
             val results = textClassifier!!.classify(text)
-            a = results[0].score.toDouble()
-            b = results[1].score.toDouble()
+            binding.hmResult.text = results[0].score.toDouble().toString()
+            binding.hmResultNews.text = results[1].score.toDouble().toString()
         }
     }
 
