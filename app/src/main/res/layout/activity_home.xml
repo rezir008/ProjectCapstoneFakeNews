@@ -139,7 +139,20 @@
         android:layout_height="150dp"
         android:layout_marginBottom="80dp"
         android:contentDescription="@string/icon_verified"
-        android:src="@drawable/verified"
+        android:src="@drawable/success"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/hm_bg2"
+        app:layout_constraintBottom_toBottomOf="@+id/hm_bg2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/hm_img_unverified"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="80dp"
+        android:contentDescription="@string/icon_verified"
+        android:src="@drawable/unsuccess"
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="@id/hm_bg2"
         app:layout_constraintBottom_toBottomOf="@+id/hm_bg2"
